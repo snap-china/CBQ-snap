@@ -37,6 +37,9 @@
             this.txtValidCode = new System.Windows.Forms.TextBox();
             this.picValidCode = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.pbVerifyCode = new CCWin.SkinControl.SkinPictureBox();
+            this.butUpdateVerifyCode = new CCWin.SkinControl.SkinButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVerifyCode)).BeginInit();
             this.SuspendLayout();
             // 
             // Eamil_Tel
@@ -103,11 +106,36 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pbVerifyCode
+            // 
+            this.pbVerifyCode.BackColor = System.Drawing.Color.Transparent;
+            this.pbVerifyCode.Location = new System.Drawing.Point(258, 232);
+            this.pbVerifyCode.Name = "pbVerifyCode";
+            this.pbVerifyCode.Size = new System.Drawing.Size(99, 42);
+            this.pbVerifyCode.TabIndex = 4;
+            this.pbVerifyCode.TabStop = false;
+            // 
+            // butUpdateVerifyCode
+            // 
+            this.butUpdateVerifyCode.BackColor = System.Drawing.Color.Transparent;
+            this.butUpdateVerifyCode.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.butUpdateVerifyCode.DownBack = null;
+            this.butUpdateVerifyCode.Location = new System.Drawing.Point(363, 243);
+            this.butUpdateVerifyCode.MouseBack = null;
+            this.butUpdateVerifyCode.Name = "butUpdateVerifyCode";
+            this.butUpdateVerifyCode.NormlBack = null;
+            this.butUpdateVerifyCode.Size = new System.Drawing.Size(75, 23);
+            this.butUpdateVerifyCode.TabIndex = 5;
+            this.butUpdateVerifyCode.Text = "看不清楚换一张";
+            this.butUpdateVerifyCode.UseVisualStyleBackColor = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 488);
+            this.Controls.Add(this.butUpdateVerifyCode);
+            this.Controls.Add(this.pbVerifyCode);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtValidCode);
             this.Controls.Add(this.textBox2);
@@ -117,6 +145,7 @@
             this.Controls.Add(this.Eamil_Tel);
             this.Name = "Login";
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pbVerifyCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +161,7 @@
         private System.Windows.Forms.TextBox txtValidCode;
         private System.Windows.Forms.ImageList picValidCode;
         private System.Windows.Forms.Button button1;
+        private CCWin.SkinControl.SkinPictureBox pbVerifyCode;
+        private CCWin.SkinControl.SkinButton butUpdateVerifyCode;
     }
 }
