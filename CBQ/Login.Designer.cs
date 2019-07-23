@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.Eamil_Tel = new System.Windows.Forms.Label();
             this.Pwd = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txb_username = new System.Windows.Forms.TextBox();
+            this.txb_pwd = new System.Windows.Forms.TextBox();
             this.Captcha = new System.Windows.Forms.Label();
             this.txtValidCode = new System.Windows.Forms.TextBox();
             this.picValidCode = new System.Windows.Forms.ImageList(this.components);
@@ -60,19 +60,19 @@
             this.Pwd.TabIndex = 0;
             this.Pwd.Text = "密码：";
             // 
-            // textBox1
+            // txb_username
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 21);
-            this.textBox1.TabIndex = 1;
+            this.txb_username.Location = new System.Drawing.Point(145, 166);
+            this.txb_username.Name = "txb_username";
+            this.txb_username.Size = new System.Drawing.Size(232, 21);
+            this.txb_username.TabIndex = 1;
             // 
-            // textBox2
+            // txb_pwd
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 205);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 21);
-            this.textBox2.TabIndex = 1;
+            this.txb_pwd.Location = new System.Drawing.Point(145, 205);
+            this.txb_pwd.Name = "txb_pwd";
+            this.txb_pwd.Size = new System.Drawing.Size(232, 21);
+            this.txb_pwd.TabIndex = 1;
             // 
             // Captcha
             // 
@@ -124,7 +124,7 @@
             this.butUpdateVerifyCode.MouseBack = null;
             this.butUpdateVerifyCode.Name = "butUpdateVerifyCode";
             this.butUpdateVerifyCode.NormlBack = null;
-            this.butUpdateVerifyCode.Size = new System.Drawing.Size(75, 23);
+            this.butUpdateVerifyCode.Size = new System.Drawing.Size(106, 23);
             this.butUpdateVerifyCode.TabIndex = 5;
             this.butUpdateVerifyCode.Text = "看不清楚换一张";
             this.butUpdateVerifyCode.UseVisualStyleBackColor = false;
@@ -138,8 +138,8 @@
             this.Controls.Add(this.pbVerifyCode);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtValidCode);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txb_pwd);
+            this.Controls.Add(this.txb_username);
             this.Controls.Add(this.Captcha);
             this.Controls.Add(this.Pwd);
             this.Controls.Add(this.Eamil_Tel);
@@ -155,8 +155,8 @@
 
         private System.Windows.Forms.Label Eamil_Tel;
         private System.Windows.Forms.Label Pwd;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txb_username;
+        private System.Windows.Forms.TextBox txb_pwd;
         private System.Windows.Forms.Label Captcha;
         private System.Windows.Forms.TextBox txtValidCode;
         private System.Windows.Forms.ImageList picValidCode;

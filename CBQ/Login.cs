@@ -163,6 +163,17 @@ namespace CBQ
         #region 登录
         private void button1_Click(object sender, EventArgs e)
         {
+            string username = this.txb_username.Text.Trim();
+            string password = this.txb_pwd.Text.Trim();
+
+            if (!string.IsNullOrEmpty(txb_username.Text.Trim()))
+            {
+                username = txb_username.Text.Trim();
+            }
+            if (!string.IsNullOrEmpty(txb_pwd.Text.Trim()))
+            {
+                password = txb_pwd.Text.Trim();
+            }
 
         }
 
