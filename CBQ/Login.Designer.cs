@@ -73,6 +73,7 @@
             this.txb_pwd.Name = "txb_pwd";
             this.txb_pwd.Size = new System.Drawing.Size(232, 21);
             this.txb_pwd.TabIndex = 1;
+            this.txb_pwd.UseSystemPasswordChar = true;
             // 
             // Captcha
             // 

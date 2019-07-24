@@ -15,8 +15,6 @@ namespace CBQ
         public Login()
         {
             InitializeComponent();
-
-            InitializeComponent();
             UpdateVerifyCode();
             //if (!this.txtValidCode.Text.Equals(_validCode.CheckCode))
             //{
@@ -154,6 +152,11 @@ namespace CBQ
             }
         }
 
+        /// <summary>
+        /// 看不清，换一张
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void butUpdateVerifyCode_Click(object sender, EventArgs e)
         {
             UpdateVerifyCode();
@@ -174,6 +177,8 @@ namespace CBQ
             {
                 password = txb_pwd.Text.Trim();
             }
+            Index index = new Index();
+            index.Show();
 
         }
 
