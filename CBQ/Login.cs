@@ -16,17 +16,6 @@ namespace CBQ
         {
             InitializeComponent();
             UpdateVerifyCode();
-            //if (!this.txtValidCode.Text.Equals(_validCode.CheckCode))
-            //{
-
-            //    MessageBox.Show(" 请输入正确的验证码!", this.Text);
-
-            //    this.txtValidCode.Focus();
-
-            //    return;
-
-            //}
-            //picValidCode.Image = Bitmap.FromStream(ValidCode.CreateCheckCodeImage());
 
         }
 
@@ -164,7 +153,7 @@ namespace CBQ
         #endregion
 
         #region 登录
-        private void button1_Click(object sender, EventArgs e)
+        private void skbtn_login_Click(object sender, EventArgs e)
         {
             string username = this.txb_username.Text.Trim();
             string password = this.txb_pwd.Text.Trim();
@@ -179,11 +168,23 @@ namespace CBQ
             }
             Index index = new Index();
             index.Show();
-
         }
 
         #endregion
 
+        #region 注册
 
+
+        #endregion
+
+        private void sklb_agreements_Click(object sender, EventArgs e)
+        {
+            #region 协议内容
+
+            Agreement agre = new Agreement();
+            agre.Show();
+            #endregion
+
+        }
     }
 }
