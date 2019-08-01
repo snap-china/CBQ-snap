@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace CBQ
 {
@@ -155,17 +156,40 @@ namespace CBQ
         #region 登录
         private void skbtn_login_Click(object sender, EventArgs e)
         {
-            string username = this.txb_username.Text.Trim();
-            string password = this.txb_pwd.Text.Trim();
+            string username = this.sktxb_user.Text.Trim();
+            string password = this.sktxb_pwd.Text.Trim();
 
-            if (!string.IsNullOrEmpty(txb_username.Text.Trim()))
+            if (!string.IsNullOrEmpty(sktxb_user.Text.Trim()))
             {
-                username = txb_username.Text.Trim();
+                username = sktxb_user.Text.Trim();
             }
-            if (!string.IsNullOrEmpty(txb_pwd.Text.Trim()))
+            if (!string.IsNullOrEmpty(sktxb_pwd.Text.Trim()))
             {
-                password = txb_pwd.Text.Trim();
+                password = sktxb_pwd.Text.Trim();
             }
+
+            Regex reMail = new Regex(@"[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?");//实例化一个Regex对象
+            Regex reuser = new Regex(@"^/w+$"); //匹配由数字、26个英文字母或者下划线组成的字符串
+
+            if (reMail.IsMatch(sktxb_user.Text) == true)//验证数据是否匹配
+            {
+                MessageBox.Show("邮箱正确");//匹配则弹出”邮箱正确“
+
+            }
+            else
+            {
+                MessageBox.Show("邮箱格式错误");//不匹配则弹出”邮箱错误“
+
+            }
+            if (reuser.IsMatch(sktxb_pwd.Text) == true)
+            {
+                MessageBox.Show("成功");
+            }
+            else
+            {
+                MessageBox.Show("错误！");
+            }
+
             Index index = new Index();
             index.Show();
         }
@@ -186,5 +210,63 @@ namespace CBQ
             #endregion
 
         }
+        #region 文本框提示
+        private string Notes = "用户名/邮箱";
+        private string NotPwd = "密码";
+        private string notYZM = "验证码";
+        private void sktxb_user_MouseEnter(object sender, EventArgs e)
+        {
+            //进入时，清空
+            if (sktxb_user.Text == Notes)
+            {
+                sktxb_user.Text = "";
+            }
+        }
+
+        private void sktxb_user_MouseLeave(object sender, EventArgs e)
+        {
+            //  退出时，重新显示
+            if (string.IsNullOrEmpty(sktxb_user.Text))
+            {
+                sktxb_user.Text = Notes;
+            }
+        }
+        private void sktxb_pwd_MouseEnter(object sender, EventArgs e)
+        {
+            //进入时，清空
+            if (sktxb_pwd.Text == NotPwd)
+            {
+                sktxb_pwd.Text = "";
+            }
+        }
+
+        private void sktxb_pwd_MouseLeave(object sender, EventArgs e)
+        {
+            //  退出时，重新显示
+            if (string.IsNullOrEmpty(sktxb_pwd.Text))
+            {
+                sktxb_pwd.Text = NotPwd;
+            }
+        }
+
+        private void sktxt_ValidCode_MouseEnter(object sender, EventArgs e)
+        {
+            //进入时，清空
+            if (sktxb_ValidCode.Text == notYZM)
+            {
+                sktxb_ValidCode.Text = "";
+            }
+        }
+
+        private void sktxt_ValidCode_MouseLeave(object sender, EventArgs e)
+        {
+            //  退出时，重新显示
+            if (string.IsNullOrEmpty(sktxb_ValidCode.Text))
+            {
+                sktxb_ValidCode.Text = notYZM;
+            }
+        }
+
+        #endregion
     }
 }
