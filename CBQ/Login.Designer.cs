@@ -100,6 +100,7 @@
             this.sklb_region.Size = new System.Drawing.Size(128, 17);
             this.sklb_region.TabIndex = 7;
             this.sklb_region.Text = "没有账号？点击去注册";
+            this.sklb_region.Click += new System.EventHandler(this.sklb_region_Click);
             // 
             // sklb_login
             // 
@@ -181,7 +182,7 @@
             this.sktxb_user.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.sktxb_user.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.sktxb_user.SkinTxt.Name = "BaseText";
-            this.sktxb_user.SkinTxt.Size = new System.Drawing.Size(210, 18);
+            this.sktxb_user.SkinTxt.Size = new System.Drawing.Size(439, 18);
             this.sktxb_user.SkinTxt.TabIndex = 0;
             this.sktxb_user.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.sktxb_user.SkinTxt.WaterText = "";
@@ -224,7 +225,7 @@
             this.sktxb_pwd.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.sktxb_pwd.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.sktxb_pwd.SkinTxt.Name = "BaseText";
-            this.sktxb_pwd.SkinTxt.Size = new System.Drawing.Size(210, 18);
+            this.sktxb_pwd.SkinTxt.Size = new System.Drawing.Size(439, 18);
             this.sktxb_pwd.SkinTxt.TabIndex = 0;
             this.sktxb_pwd.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.sktxb_pwd.SkinTxt.WaterText = "";
@@ -267,7 +268,7 @@
             this.sktxb_ValidCode.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.sktxb_ValidCode.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.sktxb_ValidCode.SkinTxt.Name = "BaseText";
-            this.sktxb_ValidCode.SkinTxt.Size = new System.Drawing.Size(80, 18);
+            this.sktxb_ValidCode.SkinTxt.Size = new System.Drawing.Size(241, 18);
             this.sktxb_ValidCode.SkinTxt.TabIndex = 0;
             this.sktxb_ValidCode.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.sktxb_ValidCode.SkinTxt.WaterText = "";

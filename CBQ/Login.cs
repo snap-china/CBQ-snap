@@ -171,7 +171,7 @@ namespace CBQ
             Regex reMail = new Regex(@"[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?");//实例化一个Regex对象
             Regex reuser = new Regex(@"^/w+$"); //匹配由数字、26个英文字母或者下划线组成的字符串
 
-            if (reMail.IsMatch(sktxb_user.Text) == true)//验证数据是否匹配
+            if (reMail.IsMatch(sktxb_user.Text) == true || reuser.IsMatch(sktxb_pwd.Text) == true)//验证数据是否匹配
             {
                 MessageBox.Show("邮箱正确");//匹配则弹出”邮箱正确“
 
@@ -268,5 +268,10 @@ namespace CBQ
         }
 
         #endregion
+
+        private void sklb_region_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
